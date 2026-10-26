@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>МЕГОЕЛЕКТРОАВТОМАТИКА</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="ТОВ «МЕГОЕЛЕКТРОАВТОМАТИКА» — виробник віброізолюючих амортизаторів АПН, АПНМ, АД-А, АФД для бортової апаратури, БпЛА, камер і гімбалів. Виробництво в Україні.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Inter+Tight:wght@700;800&display=swap">
+<style>
+/* Layout: the TX catalog sheet as a web page — white sheet, ink rules, orange accent, Inter throughout, cards with a heavy top rule */
+:root{
+  --paper:#ffffff; --sheet:#ffffff; --panel:#f3f5f8; --ink:#1d2733; --ink-2:#364152; --mute:#5b6472;
+  --line:#d5dbe2; --line-2:#e6eaef; --zebra:#fbfcfd;
+  --signal:#c2410c; --signal-soft:#fdf0e9; --steel:#1d2733; --on-steel:#ffffff;
+  --f-display:'Inter Tight','Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --f-body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --f-mono:'Inter',system-ui,sans-serif;
+  --wrap:1160px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#11161d; --sheet:#171d26; --panel:#1c2430; --ink:#e6ebf1; --ink-2:#bcc6d2; --mute:#8b96a4;
+  --line:#2c3644; --line-2:#222b37; --zebra:#151b23;
+  --signal:#f06a2c; --signal-soft:#33211a; --steel:#0b0f14; --on-steel:#e6ebf1; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --paper:#11161d; --sheet:#171d26; --panel:#1c2430; --ink:#e6ebf1; --ink-2:#bcc6d2; --mute:#8b96a4;
+  --line:#2c3644; --line-2:#222b37; --zebra:#151b23;
+  --signal:#f06a2c; --signal-soft:#33211a; --steel:#0b0f14; --on-steel:#e6ebf1; color-scheme:dark }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.55 var(--f-body);font-feature-settings:'tnum' 1;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media (min-width:720px){.wrap{padding-left:max(32px,env(safe-area-inset-left,0px));padding-right:max(32px,env(safe-area-inset-right,0px))}}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;letter-spacing:-.015em}
+.label{font:600 12px/1.2 var(--f-body);letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.num{font-variant-numeric:tabular-nums}
+:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
+
+/* header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:2.5px solid var(--ink)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{font:800 16px/1 var(--f-body);letter-spacing:.02em;text-decoration:none;white-space:nowrap}
+.brand span{color:var(--signal)}
+nav.menu{display:flex;gap:22px;font-size:14px;font-weight:500}
+nav.menu a{text-decoration:none;color:var(--ink-2)}
+nav.menu a:hover{color:var(--signal)}
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 14px/1 var(--f-body);padding:12px 18px;border-radius:2px;text-decoration:none;border:1.5px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer;transition:background .15s,border-color .15s}
+.btn:hover{background:var(--signal);border-color:var(--signal);color:var(--on-steel)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{border-color:var(--signal);color:var(--signal);background:transparent}
+@media (max-width:900px){nav.menu{display:none}}
+@media (max-width:420px){header.top .btn{display:none}}
+
+/* hero */
+.hero{padding-block:52px 44px;border-bottom:1px solid var(--line)}
+.hero .intro-apps{margin-top:0}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
+.hero-grid>*{min-width:0}
+.hero h1{font-size:clamp(34px,5.4vw,64px);line-height:1.05;font-weight:800;margin-top:18px}
+.hero h1 em{font-style:normal;color:var(--signal)}
+.hero p.lead{font-size:clamp(17px,1.6vw,19px);color:var(--ink-2);max-width:58ch;margin:22px 0 28px}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px}
+.spring-fig{position:relative;justify-self:center;width:100%;max-width:300px}
+.spring-fig svg{width:100%;height:auto;display:block}
+.spring-fig figcaption{font:400 12px/1.4 var(--f-mono);color:var(--mute);margin-top:8px;text-align:center}
+.coil{animation:breathe 3.2s ease-in-out infinite;transform-origin:50% 100%;transform-box:fill-box}
+.payload{animation:bob 3.2s ease-in-out infinite}
+@keyframes breathe{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.86)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(13px)}}
+@media (max-width:820px){.hero-grid{grid-template-columns:1fr}.spring-fig{max-width:220px;order:-1;justify-self:start}}
+
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:44px}
+.kpi{padding:16px 18px;border:1px solid var(--line);background:var(--sheet)}
+.kpi b{display:block;font:800 clamp(19px,2.2vw,26px)/1.15 var(--f-display);white-space:nowrap}
+.kpi span{font-size:13px;color:var(--mute)}
+@media (max-width:720px){.kpis{grid-template-columns:1fr 1fr}}
+
+/* sections */
+section.block{padding-block:64px;border-bottom:1px solid var(--line)}
+.sec-head{display:grid;grid-template-columns:220px 1fr;gap:32px;margin-bottom:36px}
+.sec-head>*{min-width:0}
+.sec-head h2{font-size:clamp(26px,3.2vw,38px);font-weight:800;line-height:1.1}
+.sec-head p{color:var(--ink-2);max-width:62ch;margin:14px 0 0}
+@media (max-width:820px){.sec-head{grid-template-columns:1fr;gap:10px}}
+
+/* applications */
+.apps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--panel);border-left:3px solid var(--signal)}
+.app{padding:22px;border-right:1px solid var(--line)}
+.app:last-child{border-right:0}
+.app svg{width:40px;height:40px;stroke:var(--signal);fill:none;stroke-width:1.6}
+.app h3{font:600 17px/1.3 var(--f-body);margin:14px 0 6px;letter-spacing:0}
+.app p{margin:0;font-size:14.5px;color:var(--ink-2)}
+@media (max-width:900px){.apps{grid-template-columns:1fr 1fr}.app{border-right:0;border-bottom:1px solid var(--line)}}
+@media (max-width:520px){.apps{grid-template-columns:1fr}}
+
+/* series */
+.series{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.s-card{background:var(--sheet);border:1px solid var(--line);border-top:3px solid var(--ink);display:flex;flex-direction:column}
+.s-card .hd{padding:20px 20px 16px;border-bottom:1px solid var(--line-2)}
+.s-card .code{font:800 30px/1 var(--f-display)}
+.s-card .tag{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);margin-top:2px}
+.s-card .tu{font:400 12px/1.3 var(--f-mono);color:var(--mute);margin-top:8px}
+.s-card .rng{font:700 16px/1.2 var(--f-body);color:var(--signal);margin-top:14px}
+.s-card .tag{font-size:13px;color:var(--ink-2)}
+.s-card p{font-size:14px;color:var(--ink-2);margin:0;padding:14px 20px 0}
+.s-card dl{margin:auto 0 0;padding:12px 20px 16px;display:grid;grid-template-columns:auto 1fr;font-size:13px}
+.s-card dt,.s-card dd{padding:6px 0;border-top:1px solid var(--line-2)}
+.s-card dt{color:var(--mute);font-weight:500;padding-right:10px}
+.s-card dd{margin:0;font-weight:600;text-align:right}
+@media (max-width:1000px){.series{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.series{grid-template-columns:1fr}}
+
+/* selector */
+.picker{display:grid;grid-template-columns:380px 1fr;background:var(--sheet);border:1px solid var(--line);border-top:3px solid var(--ink)}
+.picker>*{min-width:0}
+.p-form{padding:28px;background:var(--panel);border-right:1px solid var(--line);display:grid;gap:20px;align-content:start}
+.field label{display:block;font-size:14px;font-weight:600;margin-bottom:8px}
+.field .row{display:flex;align-items:center;gap:10px}
+.field input[type=number]{width:100%;font:700 22px/1 var(--f-body);padding:12px 14px;border:1.5px solid var(--line);background:var(--sheet);color:var(--ink);border-radius:2px}
+.field input[type=number]:focus{border-color:var(--signal);outline:none}
+.field .unit{font:500 14px var(--f-mono);color:var(--mute)}
+.seg{display:flex;border:1.5px solid var(--line);border-radius:2px;overflow:hidden;background:var(--sheet)}
+.seg button{flex:1;font:500 14px/1.2 var(--f-body);padding:11px 8px;border:0;background:transparent;color:var(--ink-2);cursor:pointer;border-left:1px solid var(--line)}
+.seg button:first-child{border-left:0}
+.seg button[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+.calc{font:400 14px/1.5 var(--f-body);color:var(--mute);border-top:1px solid var(--line);padding-top:16px}
+.calc b{color:var(--ink);font-weight:600}
+.p-out{padding:28px}
+.p-out .per{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.p-out .per b{font:800 clamp(34px,4vw,48px)/1 var(--f-display);color:var(--signal)}
+.p-out .per span{color:var(--mute);font-size:14px}
+.matches{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px}
+.match{border:1px solid var(--line);border-top:3px solid var(--ink);padding:14px;background:var(--sheet)}
+.match b{font:700 18px/1 var(--f-display);display:block}
+.match .r{font:600 13px var(--f-mono);color:var(--ink-2);margin-top:8px}
+.match .bar{height:4px;background:var(--line);margin-top:10px;position:relative}
+.match .bar i{position:absolute;top:-3px;width:2px;height:10px;background:var(--signal)}
+.match .m{font-size:12px;color:var(--mute);margin-top:8px}
+.empty{background:var(--panel);border-left:3px solid var(--signal);padding:16px 18px;color:var(--ink-2);font-size:15px}
+@media (max-width:860px){.picker{grid-template-columns:1fr}.p-form{border-right:0;border-bottom:1px solid var(--line)}}
+
+/* table */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.tabs button{font:600 13px/1 var(--f-body);padding:10px 14px;border:1.5px solid var(--line);background:var(--sheet);color:var(--ink-2);cursor:pointer;border-radius:2px}
+.tabs button[aria-pressed=true]{border-color:var(--ink);background:var(--ink);color:var(--paper)}
+.dims-wrap{display:grid;grid-template-columns:1fr 300px;gap:24px;align-items:start}
+.dims-wrap>*{min-width:0}
+.tbl{overflow-x:auto;background:var(--sheet);border:1px solid var(--line)}
+table.dim{width:100%;border-collapse:collapse;font:400 14px/1.3 var(--f-body);font-variant-numeric:tabular-nums;min-width:720px}
+table.dim th{background:var(--steel);color:var(--on-steel);font-weight:600;padding:10px 8px;text-align:center;white-space:nowrap}
+table.dim td{padding:8px;text-align:center;border-bottom:1px solid var(--line-2);white-space:nowrap}
+table.dim td:first-child,table.dim th:first-child{text-align:left;padding-left:14px}
+table.dim td:first-child{font-weight:700}
+table.dim tbody tr:not(.grp):nth-child(even) td{background:var(--zebra)}
+table.dim td.ld{color:var(--signal);font-weight:600}
+table.dim tr.grp td{background:var(--panel);font:700 11px var(--f-body);letter-spacing:.08em;text-transform:uppercase;color:var(--mute);padding-block:7px}
+table.dim tbody tr:not(.grp):hover td{background:var(--signal-soft)}
+.legend{background:var(--sheet);border:1px solid var(--line);border-top:3px solid var(--ink);padding:18px 20px}
+.legend svg{width:100%;height:auto;display:block;margin-bottom:12px}
+.legend svg .s{stroke:var(--ink);fill:var(--panel);stroke-width:1.4}
+.legend svg .s2{stroke:var(--ink);fill:var(--line);stroke-width:1.4}
+.legend svg .dim{stroke:var(--mute);stroke-width:1;fill:none}
+.legend svg .dsh{stroke:var(--mute);stroke-width:.8;stroke-dasharray:2 2;fill:none}
+.legend svg text{font:700 11px var(--f-mono);fill:var(--ink)}
+.legend svg text.a{fill:var(--signal)}
+.legend dl{margin:0;display:grid;grid-template-columns:34px 1fr;font-size:13px}
+.legend dt,.legend dd{padding:4px 0;border-bottom:1px solid var(--line-2)}
+.legend dt{font-weight:700}
+.legend dd{margin:0;color:var(--ink-2)}
+@media (max-width:980px){.dims-wrap{grid-template-columns:1fr}.legend{max-width:440px}}
+
+/* production */
+.prod{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.prod>*{min-width:0}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s;border-top:2.5px solid var(--ink)}
+.steps li{counter-increment:s;display:grid;grid-template-columns:48px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}
+.steps li::before{content:counter(s,decimal-leading-zero);font:700 13px var(--f-body);color:var(--signal);padding-top:3px}
+.steps b{display:block;font-weight:600}
+.steps span{color:var(--ink-2);font-size:14.5px}
+.terms{display:grid;gap:12px;align-content:start}
+.term{background:var(--panel);border-left:3px solid var(--signal);padding:16px 20px;display:grid;grid-template-columns:auto 1fr;gap:4px 16px}
+.term .k{font:600 12px var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mute);grid-row:span 2;padding-top:3px;min-width:96px}
+.term b{font-weight:600}
+.term span{color:var(--ink-2);font-size:14.5px}
+@media (max-width:860px){.prod{grid-template-columns:1fr;gap:32px}}
+
+/* contact */
+.contact{background:var(--steel);color:var(--on-steel)}
+.contact section.block{border:0}
+.contact .label{color:color-mix(in srgb,var(--on-steel) 65%,transparent)}
+.contact h2{font-size:clamp(28px,4vw,48px);font-weight:800;line-height:1.05;max-width:18ch}
+.contact p{color:color-mix(in srgb,var(--on-steel) 80%,transparent);max-width:56ch}
+.c-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:36px}
+.c-item{border:1px solid color-mix(in srgb,var(--on-steel) 22%,transparent);border-top:3px solid var(--signal);padding:20px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.c-item .v{font:700 clamp(17px,1.8vw,21px)/1.25 var(--f-body);word-break:break-all;user-select:all}
+.c-item .v a{text-decoration:none}
+.c-item button{align-self:flex-start;font:600 12px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;padding:9px 12px;background:transparent;color:var(--on-steel);border:1px solid color-mix(in srgb,var(--on-steel) 40%,transparent);cursor:pointer;border-radius:2px}
+.c-item button:hover{border-color:var(--on-steel)}
+@media (max-width:820px){.c-grid{grid-template-columns:1fr}}
+footer{padding-block:24px;font-size:13px;color:var(--mute);border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">МЕГО<span>ЕЛЕКТРО</span>АВТОМАТИКА</a>
+    <nav class="menu" aria-label="Розділи">
+      <a href="#series">Серії</a><a href="#pick">Підбір</a><a href="#dims">Розміри</a><a href="#production">Виробництво</a><a href="#contacts">Контакти</a>
+    </nav>
+    <a class="btn" href="#contacts">Запит ціни</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div class="hero-grid">
+      <div>
+        <div class="label">ТОВ · виробництво віброізолюючих амортизаторів · Україна</div>
+        <h1>Амортизатори <em>віброізолюючі</em><br>АПН, АПНМ, АД-А, АФД</h1>
+        <p class="lead">Пружинні амортизатори з демпфуючим елементом серій АПН, АПНМ, АД-А та АФД. Захищають електроніку, камери й гімбали БпЛА від вібрації та ударів. Виготовляємо на власному обладнанні, від навивки пружин до складання.</p>
+        <div class="actions">
+          <a class="btn" href="#pick">Підібрати амортизатор</a>
+          <a class="btn ghost" href="#dims">Таблиця розмірів</a>
+        </div>
+      </div>
+      <figure class="spring-fig" aria-hidden="true">
+        <svg viewBox="0 0 240 260">
+          <g class="payload">
+            <rect x="40" y="18" width="160" height="44" fill="var(--steel)"/>
+            <g fill="var(--on-steel)" opacity=".55"><rect x="54" y="32" width="26" height="4"/><rect x="54" y="42" width="44" height="4"/><circle cx="178" cy="40" r="6"/></g>
+            <rect x="110" y="62" width="20" height="18" fill="var(--line)" stroke="var(--ink)" stroke-width="1.4"/>
+          </g>
+          <g class="coil">
+            <path d="M88 82 Q120 72 152 86 Q120 100 88 100 Q120 90 152 104 Q120 118 88 118 Q120 108 152 122 Q120 136 88 136 Q120 126 152 140 Q120 154 88 154 Q120 144 152 158 Q120 172 88 172 Q120 162 152 176 Q120 190 88 190 Q120 180 152 194 Q120 208 88 206" fill="none" stroke="var(--signal)" stroke-width="3.2" stroke-linecap="round"/>
+          </g>
+          <rect x="74" y="206" width="92" height="16" fill="var(--sheet)" stroke="var(--ink)" stroke-width="1.6"/>
+          <rect x="30" y="222" width="180" height="10" fill="var(--line)" stroke="var(--ink)" stroke-width="1.6"/>
+          <g fill="var(--paper)" stroke="var(--ink)" stroke-width="1.2"><circle cx="46" cy="227" r="3"/><circle cx="194" cy="227" r="3"/></g>
+          <line x1="16" y1="246" x2="224" y2="246" stroke="var(--mute)" stroke-dasharray="4 4"/>
+        </svg>
+        <figcaption>0…2000 Гц · до 50g</figcaption>
+      </figure>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><b class="num">0,2–20 кгс</b><span>навантаження на опору</span></div>
+      <div class="kpi"><b class="num">−60…+150 °C</b><span>робоча температура</span></div>
+      <div class="kpi"><b class="num">до 2000 Гц</b><span>діапазон частот</span></div>
+      <div class="kpi"><b class="num">29</b><span>типорозмірів у 4 серіях</span></div>
+    </div>
+  </div>
+
+  <section class="block" id="apps">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="label">Застосування</div>
+        <div><h2>Там, де електроніка працює під вібрацією</h2></div>
+      </div>
+      <div class="apps">
+        <div class="app">
+          <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="7"/><circle cx="20" cy="20" r="2.5"/><path d="M6 12h6l3-4h10l3 4h6v20H6z"/></svg>
+          <h3>Камери та гімбали БпЛА</h3><p>Стабільна картинка без «желе» від гвинтів і двигуна.</p>
+        </div>
+        <div class="app">
+          <svg viewBox="0 0 40 40"><rect x="9" y="9" width="22" height="22"/><path d="M14 4v5M20 4v5M26 4v5M14 31v5M20 31v5M26 31v5M4 14h5M4 20h5M4 26h5M31 14h5M31 20h5M31 26h5"/></svg>
+          <h3>Автопілоти, IMU</h3><p>Польотні контролери отримують чисті дані з датчиків.</p>
+        </div>
+        <div class="app">
+          <svg viewBox="0 0 40 40"><path d="M20 34V18"/><path d="M12 12a11 11 0 0 1 16 0M8 8a16 16 0 0 1 24 0"/><circle cx="20" cy="17" r="2.5"/><path d="M12 34h16"/></svg>
+          <h3>РЕБ і радіомодулі</h3><p>Захист плат і роз'ємів бортових блоків від ударів.</p>
+        </div>
+        <div class="app">
+          <svg viewBox="0 0 40 40"><path d="M4 22l14-3 6-13 3 1-3 12 12 2v3l-12 1 2 9-3 1-6-9-13-1z"/></svg>
+          <h3>Авіаційна та наземна техніка</h3><p>Класичне застосування: апаратура літальних апаратів і транспорту.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="series">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="label">Номенклатура</div>
+        <div><h2>Чотири серії під різні умови монтажу</h2>
+        <p>АПН і АПНМ працюють у будь-якому положенні. АД-А та АФД призначені для вертикального навантаження. Повні характеристики є в PDF-каталозі, надішлемо на запит.</p></div>
+      </div>
+      <div class="series" id="seriesList"></div>
+    </div>
+  </section>
+
+  <section class="block" id="pick">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="label">Підбір</div>
+        <div><h2>Який типорозмір вам потрібен</h2>
+        <p>Вкажіть масу блоку й кількість опор. Розрахунок покаже навантаження на одну опору і типорозміри, у діапазон яких воно потрапляє. Остаточний вибір підтвердимо після уточнення умов вібрації.</p></div>
+      </div>
+      <div class="picker">
+        <form class="p-form" id="pickForm" onsubmit="return false">
+          <div class="field">
+            <label for="mass">Маса апаратури</label>
+            <div class="row"><input id="mass" type="number" min="0.1" step="0.1" value="2.4" inputmode="decimal"><span class="unit">кг</span></div>
+          </div>
+          <div class="field">
+            <label id="nLbl">Кількість опор</label>
+            <div class="seg" role="group" aria-labelledby="nLbl" id="nSeg">
+              <button type="button" data-v="3">3</button><button type="button" data-v="4" aria-pressed="true">4</button><button type="button" data-v="6">6</button><button type="button" data-v="8">8</button>
+            </div>
+          </div>
+          <div class="field">
+            <label id="oLbl">Положення монтажу</label>
+            <div class="seg" role="group" aria-labelledby="oLbl" id="oSeg">
+              <button type="button" data-v="v" aria-pressed="true">Вертикально</button><button type="button" data-v="any">Під кутом / боком</button>
+            </div>
+          </div>
+          <div class="calc" id="calc"></div>
+        </form>
+        <div class="p-out" aria-live="polite">
+          <div class="per"><b class="num" id="perVal">0,6</b><span>кгс на одну опору</span></div>
+          <div class="matches" id="matches"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="dims">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="label">Розміри</div>
+        <div><h2>Габаритні та приєднувальні розміри</h2>
+        <p>Розміри в міліметрах, навантаження в кгс на одну опору. Схема умовна, однакова для всіх серій.</p></div>
+      </div>
+      <div class="tabs" role="group" aria-label="Фільтр серій" id="tabs"></div>
+      <div class="dims-wrap">
+        <div class="tbl"><table class="dim">
+          <thead><tr><th>Тип</th><th>H</th><th>h</th><th>A</th><th>B</th><th>D</th><th>d1</th><th>d2</th><th>S</th><th>Різьба d</th><th>Навантаження</th></tr></thead>
+          <tbody id="dimBody"></tbody>
+        </table></div>
+        <aside class="legend">
+          <svg viewBox="0 0 220 190" aria-hidden="true">
+            <rect class="s2" x="98" y="20" width="24" height="10"/>
+            <rect class="s" x="104" y="30" width="12" height="18"/>
+            <rect class="s" x="62" y="48" width="96" height="108" rx="3"/>
+            <rect class="s2" x="40" y="156" width="140" height="8"/>
+            <line class="dim" x1="20" y1="20" x2="20" y2="164"/><line class="dsh" x1="16" y1="20" x2="96" y2="20"/><line class="dsh" x1="16" y1="164" x2="38" y2="164"/>
+            <text x="8" y="96">H</text>
+            <line class="dim" x1="196" y1="48" x2="196" y2="164"/><line class="dsh" x1="160" y1="48" x2="200" y2="48"/><line class="dsh" x1="182" y1="164" x2="200" y2="164"/>
+            <text x="202" y="110">h</text>
+            <line class="dim" x1="98" y1="11" x2="122" y2="11"/><text x="106" y="8">S</text>
+            <line class="dim" x1="40" y1="176" x2="180" y2="176"/><text x="106" y="188">A</text>
+            <text class="a" x="124" y="42">d</text>
+          </svg>
+          <dl>
+            <dt>H</dt><dd>загальна висота</dd>
+            <dt>h</dt><dd>висота корпусу з фланцем</dd>
+            <dt>A</dt><dd>розмір фланця</dd>
+            <dt>B</dt><dd>відстань між кріпильними отворами</dd>
+            <dt>D</dt><dd>діаметр корпусу</dd>
+            <dt>d1</dt><dd>діаметр втулки</dd>
+            <dt>d2</dt><dd>діаметр кріпильних отворів</dd>
+            <dt>S</dt><dd>розмір під ключ</dd>
+            <dt>d</dt><dd>різьба кріплення апаратури</dd>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="production">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="label">Виробництво</div>
+        <div><h2>Власне виробництво з повним циклом</h2>
+        <p>Перевірена конструкція серійного виробництва. Усі ключові операції виконуємо у власному цеху.</p></div>
+      </div>
+      <div class="prod">
+        <ol class="steps">
+          <li><div><b>Навивка пружин</b><span>Пружинна й алюмінієва проволока 0,015–3,5 мм вітчизняного постачальника.</span></div></li>
+          <li><div><b>Демпфуючий елемент</b><span>В'язана проволочна сітка на кругловязальній машині.</span></div></li>
+          <li><div><b>Штампування корпусів</b><span>Ексцентрикові преси та власні штампи для фланців і корпусів.</span></div></li>
+          <li><div><b>Токарна обробка</b><span>Втулки та шпильки з латуні ЛС-59.</span></div></li>
+          <li><div><b>Складання і контроль</b><span>Перевірка розмірів і робочого ходу кожної партії.</span></div></li>
+        </ol>
+        <div class="terms">
+          <div class="term"><span class="k">Партії</span><b>Від малих серій до тисяч на місяць</b><span>Поточна потужність до 3 000 шт/міс одного типорозміру.</span></div>
+          <div class="term"><span class="k">Під задачу</span><b>Допоможемо з підбором</b><span>Розрахуємо кількість опор і типорозмір під вашу масу та вібраційне навантаження.</span></div>
+          <div class="term"><span class="k">Зразки</span><b>Тестова партія для випробувань</b><span>Перед серійним замовленням можна отримати зразки.</span></div>
+          <div class="term"><span class="k">Документи</span><b>Каталог технічних характеристик</b><span>PDF українською з усіма 29 типорозмірами надсилаємо на запит.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="contact" id="contacts">
+    <section class="block">
+      <div class="wrap">
+        <div class="label">Контакти</div>
+        <h2 style="margin-top:16px">Надішліть масу блоку та умови роботи</h2>
+        <p>Підберемо амортизатори, назвемо ціну і терміни. Відповідаємо українською.</p>
+        <div class="c-grid">
+          <div class="c-item"><span class="label">Телефон</span><span class="v"><a href="tel:+380736721765">+380 73 672 17 65</a></span><button type="button" data-copy="+380736721765">Копіювати</button></div>
+          <div class="c-item"><span class="label">E-mail</span><span class="v"><a href="mailto:denys.kiz.mego@gmail.com">denys.kiz.mego@gmail.com</a></span><button type="button" data-copy="denys.kiz.mego@gmail.com">Копіювати</button></div>
+          <div class="c-item"><span class="label">Виробництво</span><span class="v">Виробництво в Україні</span><span style="font-size:14px;opacity:.75">ТОВ «МЕГОЕЛЕКТРОАВТОМАТИКА»</span></div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer><div class="wrap"><span>© 2026 ТОВ «МЕГОЕЛЕКТРОАВТОМАТИКА»</span><span>Віброізолюючі амортизатори АПН · АПНМ · АД-А · АФД</span></div></footer>
+
+<script>
+const SERIES=[
+ {code:"АПН",tu:"6Л0.445.000 ТУ",tag:"Будь-яке положення",rng:"0,5–15 кгс",any:true,lead:"Для захисту бортової апаратури літальних апаратів від вібрації та ударів.",
+  specs:[["Температура","−60…+150 °C"],["Частоти","0…2000 Гц"],["Удари","до 12g"],["Прискорення","до 15g"],["Ресурс","2000 год / 8 р."]]},
+ {code:"АПНМ",tu:"6Л0.445.000 ТУ",tag:"Підвищені перевантаження",rng:"0,5–15 кгс",any:true,lead:"Модифікація АПН для більших прискорень і довших ударних імпульсів.",
+  specs:[["Температура","−60…+150 °C"],["Частоти","0…2000 Гц"],["Удари","до 12g, 20…40 мс"],["Прискорення","до 25g"],["Ресурс","2000 год / 8 р."]]},
+ {code:"АД-А",tu:"ВД0.445.001 ТУ",tag:"Вертикальне навантаження",rng:"0,3–15 кгс",any:false,lead:"Для апаратури з вертикально прикладеними вібраційними та ударними навантаженнями.",
+  specs:[["Температура","−60…+70 °C"],["Частоти","15 / 40 / 80 Гц"],["Удари","10 000 × 4g"],["Вібрація","до 5g"],["Ресурс","500 год / 8 р."]]},
+ {code:"АФД",tu:"рег. № С 36463-81",tag:"Вертикальне, до 15°",rng:"0,2–20 кгс",any:false,lead:"Найширший діапазон мас, від легких модулів до важких блоків.",
+  specs:[["Температура","−60…+150 °C"],["Частоти","0…300 Гц"],["Удари","10g / 5g"],["Прискорення","до 10g"],["Ресурс","1500 год / 8 р."]]}
+];
+// name, H, h, A, B, D, d1, d2, S, thread, load
+const ROWS={
+ "АПН":[["АПН-1",38.5,28.8,38,29,33,14,4.3,11,"М4-6H×10","0,5–1,0"],["АПН-2",47.5,35.2,44,35,40.4,17,4.3,14,"М5-6H×10","1,0–2,5"],["АПН-3",47,35.2,44,35,40.4,17,4.3,14,"М5-6H×10","2,0–5,0"],["АПН-4",55,40.4,52,41,47.4,19,5.3,17,"М6-6H×12","4,0–7,0"],["АПН-5",53.4,40.4,52,41,47.4,19,5.3,17,"М6-6H×12","6,0–10,0"],["АПН-6",60.3,46,59,47,55,23,6.8,19,"М8-6H×12","9,0–15,0"]],
+ "АПНМ":[["АПНМ-1",49,34.2,33,29,33,14,4.3,11,"М4-6H×10","0,5–0,9"],["АПНМ-2",59,43.2,44,35,40.4,17,4.3,14,"М6-6H×10","0,9–2,0"],["АПНМ-3",59,43.2,44,35,40.4,17,4.3,14,"М6-6H×10","2,0–3,5"],["АПНМ-4",66,47.9,52,41,47.9,19,5.3,17,"М6-6H×12","3,5–6,0"],["АПНМ-5",66,47.9,52,41,47.9,19,5.3,17,"М6-6H×12","6,0–9,0"],["АПНМ-6",75,56.2,59,47,55,23,6.8,19,"М8-6H×12","9,0–15,0"]],
+ "АД-А":[["АД-1А",26,19.2,35,26,27,8,3.2,6,"М3-6H×6","0,3–0,6"],["АД-2А",26,19.2,35,26,27,8,3.2,6,"М3-6H×6","0,6–1,0"],["АД-3А",40,29.2,48,36,39,11,5.2,9,"М6-6H×8","1,0–1,5"],["АД-4А",40,29.2,48,36,39,11,5.2,9,"М6-6H×8","1,5–3,0"],["АД-5А",40,29.2,48,36,39,11,5.2,9,"М6-6H×8","3,0–5,0"],["АД-6А",40,29.2,48,36,39,11,5.2,9,"М6-6H×8","5,0–7,0"],["АД-7А",41.5,29,65,50,57,16,5.2,14,"М6-6H×8","7,0–10,0"],["АД-8А",41.5,29,65,50,57,16,5.2,14,"М6-6H×8","10,0–15,0"]],
+ "АФД":[["АФД-1",41.5,28.8,38,29,33,14,4.3,11,"М4-6H×10","0,2–0,3"],["АФД-2",42.5,30.2,44,33,40.4,14,4.3,11,"М4-6H×10","0,3–0,5"],["АФД-3",42.5,30.2,44,33,40.4,14,4.3,11,"М4-6H×10","0,5–0,75"],["АФД-4",47,33.4,52,41,47.4,17,5.3,14,"М5-6H×10","0,75–1,25"],["АФД-5",47,33.4,52,41,47.4,17,5.3,14,"М5-6H×10","1,25–2,0"],["АФД-6",52,37,59,47,55,20,5.3,17,"М6-6H×12","2,0–3,0"],["АФД-7",52,37,59,47,55,20,5.3,17,"М6-6H×12","3,0–5,0"],["АФД-8",56.5,41.3,67,53,52,20,5.3,17,"М8-6H×9,8","5,0–10,0"],["АФД-9",56.5,41.3,67,53,52,20,5.3,17,"М8-6H×9,8","10,0–20,0"]]
+};
+const fmt=n=>String(n).replace('.',',');
+const fmtLoad=n=>(Math.round(n*100)/100).toLocaleString('uk-UA',{maximumFractionDigits:2});
+const range=s=>s.split('–').map(x=>parseFloat(x.replace(',','.')));
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+document.getElementById('seriesList').innerHTML=SERIES.map(s=>`
+ <article class="s-card"><div class="hd"><div class="code">${s.code}</div><div class="tu">${s.tu}</div>
+ <div class="rng num">${s.rng}</div><div class="tag">${s.tag}</div></div>
+ <p>${s.lead}</p><dl>${s.specs.map(([k,v])=>`<dt>${k}</dt><dd class="num">${v}</dd>`).join('')}</dl></article>`).join('');
+
+// dimensions table
+let filter='all';
+const tabs=document.getElementById('tabs');
+tabs.innerHTML=['all',...Object.keys(ROWS)].map(k=>`<button type="button" data-k="${k}" aria-pressed="${k==='all'}">${k==='all'?'Усі серії':k}</button>`).join('');
+function renderDims(){
+  let h='';
+  for(const [g,rows] of Object.entries(ROWS)){
+    if(filter!=='all'&&filter!==g)continue;
+    h+=`<tr class="grp"><td colspan="11">Серія ${g}</td></tr>`;
+    for(const r of rows)h+=`<tr><td>${r[0]}</td>${r.slice(1,9).map(c=>`<td>${fmt(c)}</td>`).join('')}<td>${r[9]}</td><td class="ld">${r[10]}</td></tr>`;
+  }
+  document.getElementById('dimBody').innerHTML=h;
+}
+tabs.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;filter=b.dataset.k;
+  tabs.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));renderDims();});
+renderDims();
+
+// selector
+let n=4, orient='v';
+function seg(id,cb){const el=document.getElementById(id);el.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
+  el.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));cb(b.dataset.v);calc();});}
+seg('nSeg',v=>n=+v); seg('oSeg',v=>orient=v);
+const massEl=document.getElementById('mass'); massEl.addEventListener('input',calc);
+function calc(){
+  const m=parseFloat(String(massEl.value).replace(',','.'));
+  const out=document.getElementById('matches');
+  if(!(m>0)){document.getElementById('perVal').textContent='—';document.getElementById('calc').innerHTML='Вкажіть масу більше нуля.';out.innerHTML='';return;}
+  const per=m/n;
+  document.getElementById('perVal').textContent=fmtLoad(per);
+  document.getElementById('calc').innerHTML=`<b>${fmtLoad(m)} кг</b> ÷ <b>${n}</b> опор = <b>${fmtLoad(per)} кгс</b> на опору`;
+  const allowed=SERIES.filter(s=>orient==='v'||s.any).map(s=>s.code);
+  const res=[];
+  for(const g of allowed)for(const r of ROWS[g]){const [lo,hi]=range(r[10]);if(per>=lo&&per<=hi)res.push({g,r,lo,hi});}
+  if(!res.length){
+    out.innerHTML=`<div class="empty">Для ${fmtLoad(per)} кгс на опору ${per>20?'потрібно більше опор: максимум у серіях 20 кгс на одну.':per<0.2?'краще зменшити кількість опор: мінімальне навантаження 0,2 кгс.':'у вибраному положенні немає точного збігу. Спробуйте іншу кількість опор або напишіть нам.'}</div>`;return;}
+  out.innerHTML=res.map(({g,r,lo,hi})=>{const p=Math.max(0,Math.min(100,(per-lo)/(hi-lo)*100));
+    return `<div class="match"><b>${esc(r[0])}</b><div class="r num">${r[10]} кгс</div><div class="bar"><i style="left:calc(${p.toFixed(0)}% - 1px)"></i></div><div class="m">${SERIES.find(s=>s.code===g).tag} · H ${fmt(r[1])} мм · ${r[9].split('×')[0]}</div></div>`}).join('');
+}
+calc();
+
+// copy buttons
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',()=>{
+  const t=b.dataset.copy, done=()=>{const o=b.textContent;b.textContent='Скопійовано';setTimeout(()=>b.textContent=o,1600)};
+  try{navigator.clipboard.writeText(t).then(done,()=>sel(b))}catch(e){sel(b)}
+}));
+function sel(b){const v=b.parentElement.querySelector('.v');const r=document.createRange();r.selectNodeContents(v);const s=getSelection();s.removeAllRanges();s.addRange(r);}
+</script>
+</body>
+</html>
