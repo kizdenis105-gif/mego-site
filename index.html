@@ -73,14 +73,14 @@ nav.menu a:hover{color:var(--signal)}
 .hero h1 em{font-style:normal;color:var(--signal)}
 .hero p.lead{font-size:clamp(17px,1.6vw,19px);color:var(--ink-2);max-width:58ch;margin:22px 0 28px}
 .hero .actions{display:flex;flex-wrap:wrap;gap:12px}
-.spring-fig{position:relative;justify-self:center;width:100%;max-width:300px}
-.spring-fig svg{width:100%;height:auto;display:block}
-.spring-fig figcaption{font:400 12px/1.4 var(--f-mono);color:var(--mute);margin-top:8px;text-align:center}
-.coil{animation:breathe 3.2s ease-in-out infinite;transform-origin:50% 100%;transform-box:fill-box}
-.payload{animation:bob 3.2s ease-in-out infinite}
-@keyframes breathe{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.86)}}
-@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(13px)}}
-@media (max-width:820px){.hero-grid{grid-template-columns:1fr}.spring-fig{max-width:220px;order:-1;justify-self:start}}
+.hero-photo{margin:0;justify-self:center;width:100%;max-width:440px}
+.hero-photo img{width:100%;height:auto;display:block;filter:drop-shadow(0 18px 22px rgba(20,30,45,.18))}
+.hero-photo figcaption,.gallery figcaption{font:400 12px/1.4 var(--f-mono);color:var(--mute);margin-top:10px;text-align:center}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px;padding-top:32px;border-top:1px solid var(--line)}
+.gallery figure{margin:0;background:var(--panel);padding:24px;display:flex;flex-direction:column;justify-content:center}
+.gallery img{width:100%;height:auto;display:block}
+@media (max-width:640px){.gallery{grid-template-columns:1fr}}
+@media (max-width:820px){.hero-grid{grid-template-columns:1fr}.hero-photo{max-width:300px;order:-1;justify-self:start}}
 
 .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:44px}
 .kpi{padding:16px 18px;border:1px solid var(--line);background:var(--sheet)}
@@ -261,22 +261,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <a class="btn ghost" href="#dims">Таблиця розмірів</a>
         </div>
       </div>
-      <figure class="spring-fig" aria-hidden="true">
-        <svg viewBox="0 0 240 260">
-          <g class="payload">
-            <rect x="40" y="18" width="160" height="44" fill="var(--steel)"/>
-            <g fill="var(--on-steel)" opacity=".55"><rect x="54" y="32" width="26" height="4"/><rect x="54" y="42" width="44" height="4"/><circle cx="178" cy="40" r="6"/></g>
-            <rect x="110" y="62" width="20" height="18" fill="var(--line)" stroke="var(--ink)" stroke-width="1.4"/>
-          </g>
-          <g class="coil">
-            <path d="M88 82 Q120 72 152 86 Q120 100 88 100 Q120 90 152 104 Q120 118 88 118 Q120 108 152 122 Q120 136 88 136 Q120 126 152 140 Q120 154 88 154 Q120 144 152 158 Q120 172 88 172 Q120 162 152 176 Q120 190 88 190 Q120 180 152 194 Q120 208 88 206" fill="none" stroke="var(--signal)" stroke-width="3.2" stroke-linecap="round"/>
-          </g>
-          <rect x="74" y="206" width="92" height="16" fill="var(--sheet)" stroke="var(--ink)" stroke-width="1.6"/>
-          <rect x="30" y="222" width="180" height="10" fill="var(--line)" stroke="var(--ink)" stroke-width="1.6"/>
-          <g fill="var(--paper)" stroke="var(--ink)" stroke-width="1.2"><circle cx="46" cy="227" r="3"/><circle cx="194" cy="227" r="3"/></g>
-          <line x1="16" y1="246" x2="224" y2="246" stroke="var(--mute)" stroke-dasharray="4 4"/>
-        </svg>
-        <figcaption>0…2000 Гц · до 50g</figcaption>
+      <figure class="hero-photo">
+        <img src="img/apn-1-side.webp" width="863" height="562" alt="Віброізолюючі амортизатори АПН-1, вигляд збоку" fetchpriority="high">
+        <figcaption>АПН-1 · 0,5–1 кгс · серійне виробництво</figcaption>
       </figure>
     </div>
     <div class="kpis">
@@ -424,6 +411,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <div class="term"><span class="k">Зразки</span><b>Тестова партія для випробувань</b><span>Перед серійним замовленням можна отримати зразки.</span></div>
           <div class="term"><span class="k">Документи</span><b>Каталог технічних характеристик</b><span>PDF українською з усіма 29 типорозмірами надсилаємо на запит.</span></div>
         </div>
+      </div>
+      <div class="gallery">
+        <figure><img src="img/apn-1-top.webp" width="807" height="448" alt="Амортизатори АПН-1 з маркуванням 0,5…1 кгс, вигляд зверху" loading="lazy"><figcaption>Маркування типу та навантаження на корпусі</figcaption></figure>
+        <figure><img src="img/apn-1-pair.webp" width="900" height="504" alt="Два амортизатори АПН-1 з фланцями для кріплення на чотири гвинти" loading="lazy"><figcaption>Фланець під чотири гвинти, робота в будь-якому положенні</figcaption></figure>
       </div>
     </div>
   </section>
